@@ -55,6 +55,6 @@ export default defineConfig({
       },
     },
   },
-  //base: "/azile",
-  base: "/"
+  base: "/project",
+ // base: "/"
 }); 
