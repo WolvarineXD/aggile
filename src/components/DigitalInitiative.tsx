@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,6 +7,10 @@ interface Leader {
   title: string;
   email: string;
 }
+/*export interface Stat {
+  label: string;
+  value: string | number;
+}*/
 
 interface DigitalInitiativeProps {
   name: string;
@@ -15,6 +18,7 @@ interface DigitalInitiativeProps {
   leaders: Leader[];
   description: string;
   path: string;
+ // stats?: Stat[] | Stat; 
 }
 
 const DigitalInitiative: React.FC<DigitalInitiativeProps> = ({

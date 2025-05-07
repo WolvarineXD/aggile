@@ -197,7 +197,7 @@ const HomePage = () => {
                   leaders={initiative.leaders}
                   description={initiative.description}
                   path={initiative.path}
-                  stats={initiative.stats}
+                 // stats={initiative.stats}
                 />
               </motion.div>
             ))}

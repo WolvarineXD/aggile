@@ -55,6 +55,6 @@ export default defineConfig({
       },
     },
   },
-  base: "/project",
- // base: "/"
+  //base: "/project",
+  base: "/"
 }); 

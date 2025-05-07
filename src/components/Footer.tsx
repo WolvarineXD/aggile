@@ -64,15 +64,15 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-white mb-4">Visitor Statistics</h3>
+              <h3 className="text-xl font-bold text-white mb-4"></h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-theme-gray p-4 rounded-lg">
-                  <div className="text-xl font-bold text-theme-orange">20</div>
-                  <p className="text-white/60 text-sm">Total Visitors</p>
+                  <div className="text-xl font-bold text-theme-orange"></div>
+                  <p className="text-white/60 text-sm">An good informative website</p>
                 </div>
                 <div className="bg-theme-gray p-4 rounded-lg">
-                  <div className="text-xl font-bold text-theme-orange">10</div>
-                  <p className="text-white/60 text-sm">Today's Visitors</p>
+                  <div className="text-xl font-bold text-theme-orange"></div>
+                  <p className="text-white/60 text-sm">Visitors are allowed to use this info for project</p>
                 </div>
               </div>
             </div>
