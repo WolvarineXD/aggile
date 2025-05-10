@@ -7,6 +7,9 @@ export class VisitorCounter {
   public async incrementTotalVisitors(): Promise<number> {
     console.log('Attempting to increment total visitors...');
     try {
+      if (!db) {
+        throw new Error('Firestore db is not initialized');
+      }
       await setDoc(this.totalDocRef, { count: increment(1) }, { merge: true });
       console.log('Increment successful');
       const updatedDoc = await getDoc(this.totalDocRef);
@@ -22,6 +25,9 @@ export class VisitorCounter {
   public async getTotalVisitors(): Promise<number> {
     console.log('Attempting to fetch total visitors...');
     try {
+      if (!db) {
+        throw new Error('Firestore db is not initialized');
+      }
       const docSnap = await getDoc(this.totalDocRef);
       const count = docSnap.exists() ? docSnap.data()?.count || 0 : 0;
       console.log('Fetched count:', count);
