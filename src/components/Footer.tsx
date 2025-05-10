@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowUp } from 'lucide-react';
 import { VisitorCounter } from '../services/VisitorCounter';
-import ErrorBoundary from './ErrorBoundary';
+// Remove: import ErrorBoundary from './ErrorBoundary';
 
 const Footer = () => {
   const [totalVisitors, setTotalVisitors] = useState<number>(0);
@@ -40,117 +40,116 @@ const Footer = () => {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <footer className="bg-theme-darkGray">
-        <div className="py-8">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">India Digital Vision</h3>
-                <p className="text-white/60">
-                  Showcasing India's innovative digital public infrastructure and technologies that are transforming the nation.
-                </p>
-                <div className="lang-switcher">
-                  <select>
-                    <option value="en">English</option>
-                    <option value="hi">Hindi</option>
-                    <option value="ta">Tamil</option>
-                    <option value="te">Telugu</option>
-                    <option value="kn">Kannada</option>
-                    <option value="ml">Malayalam</option>
-                    <option value="bn">Bengali</option>
-                    <option value="gu">Gujarati</option>
-                    <option value="mr">Marathi</option>
-                    <option value="or">Odia</option>
-                    <option value="pa">Punjabi</option>
-                    <option value="as">Assamese</option>
-                    <option value="ks">Kashmiri</option>
-                    <option value="ne">Nepali</option>
-                    <option value="si">Sinhala</option>
-                    <option value="bo">Bodo</option>
-                    <option value="brx">Bodo</option>
-                    <option value="doi">Dogri</option>
-                    <option value="kok">Konkani</option>
-                    <option value="mai">Maithili</option>
-                    <option value="mni">Manipuri</option>
-                    <option value="sat">Santali</option>
-                    <option value="sd">Sindhi</option>
-                    <option value="ur">Urdu</option>
-                  </select>
-                </div>
-                <div className="flex space-x-4 mt-6">
-                  <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
-                    <Facebook size={18} />
-                  </a>
-                  <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
-                    <Twitter size={18} />
-                  </a>
-                  <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
-                    <Linkedin size={18} />
-                  </a>
-                  <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
-                    <Instagram size={18} />
-                  </a>
-                  <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
-                    <Youtube size={18} />
-                  </a>
-                </div>
+    // Remove ErrorBoundary wrapper
+    <footer className="bg-theme-darkGray">
+      <div className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">India Digital Vision</h3>
+              <p className="text-white/60">
+                Showcasing India's innovative digital public infrastructure and technologies that are transforming the nation.
+              </p>
+              <div className="lang-switcher">
+                <select>
+                  <option value="en">English</option>
+                  <option value="hi">Hindi</option>
+                  <option value="ta">Tamil</option>
+                  <option value="te">Telugu</option>
+                  <option value="kn">Kannada</option>
+                  <option value="ml">Malayalam</option>
+                  <option value="bn">Bengali</option>
+                  <option value="gu">Gujarati</option>
+                  <option value="mr">Marathi</option>
+                  <option value="or">Odia</option>
+                  <option value="pa">Punjabi</option>
+                  <option value="as">Assamese</option>
+                  <option value="ks">Kashmiri</option>
+                  <option value="ne">Nepali</option>
+                  <option value="si">Sinhala</option>
+                  <option value="bo">Bodo</option>
+                  <option value="brx">Bodo</option>
+                  <option value="doi">Dogri</option>
+                  <option value="kok">Konkani</option>
+                  <option value="mai">Maithili</option>
+                  <option value="mni">Manipuri</option>
+                  <option value="sat">Santali</option>
+                  <option value="sd">Sindhi</option>
+                  <option value="ur">Urdu</option>
+                </select>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/" className="text-white/60 hover:text-theme-orange transition-colors">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about" className="text-white/60 hover:text-theme-orange transition-colors">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="text-white/60 hover:text-theme-orange transition-colors">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Visitors Stats</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-theme-gray p-4 rounded-lg">
-                    <div className="text-xl font-bold text-theme-orange">Total Visitors</div>
-                    <p className="text-white/60 text-sm">{totalVisitors.toLocaleString()}</p>
-                  </div>
-                </div>
+              <div className="flex space-x-4 mt-6">
+                <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
+                  <Facebook size={18} />
+                </a>
+                <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
+                  <Twitter size={18} />
+                </a>
+                <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
+                  <Linkedin size={18} />
+                </a>
+                <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
+                  <Instagram size={18} />
+                </a>
+                <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
+                  <Youtube size={18} />
+                </a>
               </div>
             </div>
-            <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-white/60 text-sm">© 2024. India Digital Vision</p>
-              <div className="flex space-x-4 mt-4 md:mt-0">
-                <Link to="/contact" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
-                  Contact Us
-                </Link>
-                <Link to="#" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="#" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
-                    Terms of Use
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/" className="text-white/60 hover:text-theme-orange transition-colors">
+                    Home
                   </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-white/60 hover:text-theme-orange transition-colors">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-white/60 hover:text-theme-orange transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Visitors Stats</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-theme-gray p-4 rounded-lg">
+                  <div className="text-xl font-bold text-theme-orange">Total Visitors</div>
+                  <p className="text-white/60 text-sm">{totalVisitors.toLocaleString()}</p>
+                </div>
               </div>
             </div>
           </div>
+          <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-white/60 text-sm">© 2024. India Digital Vision</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <Link to="/contact" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
+                Contact Us
+              </Link>
+              <Link to="#" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="#" className="text-white/60 hover:text-theme-orange text-sm transition-colors">
+                Terms of Use
+              </Link>
+            </div>
+          </div>
         </div>
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-theme-orange p-3 rounded-full shadow-lg hover:bg-theme-orange/90 transition-colors"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={20} className="text-white" />
-        </button>
-      </footer>
-    </ErrorBoundary>
+      </div>
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-theme-orange p-3 rounded-full shadow-lg hover:bg-theme-orange/90 transition-colors"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={20} className="text-white" />
+      </button>
+    </footer>
   );
 };
 
