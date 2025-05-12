@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowUp } from 'lucide-react';
 import { VisitorCounter } from '../services/VisitorCounter';
-// Remove: import ErrorBoundary from './ErrorBoundary';
 
 const Footer = () => {
   const [totalVisitors, setTotalVisitors] = useState<number>(0);
@@ -40,7 +39,6 @@ const Footer = () => {
   }, []);
 
   return (
-    // Remove ErrorBoundary wrapper
     <footer className="bg-theme-darkGray">
       <div className="py-8">
         <div className="container mx-auto px-6">
@@ -50,34 +48,6 @@ const Footer = () => {
               <p className="text-white/60">
                 Showcasing India's innovative digital public infrastructure and technologies that are transforming the nation.
               </p>
-              <div className="lang-switcher">
-                <select>
-                  <option value="en">English</option>
-                  <option value="hi">Hindi</option>
-                  <option value="ta">Tamil</option>
-                  <option value="te">Telugu</option>
-                  <option value="kn">Kannada</option>
-                  <option value="ml">Malayalam</option>
-                  <option value="bn">Bengali</option>
-                  <option value="gu">Gujarati</option>
-                  <option value="mr">Marathi</option>
-                  <option value="or">Odia</option>
-                  <option value="pa">Punjabi</option>
-                  <option value="as">Assamese</option>
-                  <option value="ks">Kashmiri</option>
-                  <option value="ne">Nepali</option>
-                  <option value="si">Sinhala</option>
-                  <option value="bo">Bodo</option>
-                  <option value="brx">Bodo</option>
-                  <option value="doi">Dogri</option>
-                  <option value="kok">Konkani</option>
-                  <option value="mai">Maithili</option>
-                  <option value="mni">Manipuri</option>
-                  <option value="sat">Santali</option>
-                  <option value="sd">Sindhi</option>
-                  <option value="ur">Urdu</option>
-                </select>
-              </div>
               <div className="flex space-x-4 mt-6">
                 <a href="#" className="bg-theme-gray hover:bg-theme-orange text-white p-2 rounded-full transition-colors">
                   <Facebook size={18} />
